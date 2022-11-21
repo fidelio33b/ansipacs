@@ -1,0 +1,7 @@
+- name: "Installation de emacs"
+  hosts: all
+  tasks:
+    - name: "Installation du package emacs"
+      apt:
+        name: "emacs-nox"
+        state: "present"
