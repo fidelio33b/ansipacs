@@ -1,5 +1,6 @@
 - name: "Installation de emacs"
   hosts: all
+  become: true
   tasks:
     - name: "Installation du package emacs"
       apt:
