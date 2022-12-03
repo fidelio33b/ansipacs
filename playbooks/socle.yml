@@ -1,7 +1,21 @@
+- name: "Update packages"
+  hosts: all
+  become: true
+  tasks:
+    - name: "apt upgrade"
+      apt:
+        only_upgrade: true
+        update_cache: true
+        upgrade: true
 - name: "Installation de emacs"
   hosts: all
   become: true
   tasks:
+    - name: "apt upgrade"
+      apt:
+        only_upgrade: yes
+        update_cache: yes
+        upgrade: yes
     - name: "Installation du package emacs"
       apt:
         name: "emacs-nox"
