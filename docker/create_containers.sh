@@ -9,3 +9,5 @@ do
     docker exec -i ${CONTAINER_NAME} apt -y upgrade
     docker exec -i ${CONTAINER_NAME} apt -y install python3-minimal
 done
+
+echo "done"
